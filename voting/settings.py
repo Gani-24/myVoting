@@ -12,15 +12,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import db
-
-cred = credentials.Certificate('/Users/gani/new/voting/serviceAccountkey.json')
-firebase_admin.initialize_app(cred,{
-    'databaseURL': 'https://gani-voting-app-default-rtdb.firebaseio.com'
-})
-ref = db.reference('votes')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

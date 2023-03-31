@@ -5,8 +5,6 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from .models import Candidate,ControlVote,Position
 from django.contrib import messages
-from firebase_admin import db
-ref=db.reference('votes')
 
 
 
@@ -55,7 +53,6 @@ def VotingPage(request, pos):
             temp2.save()
             temp.status = True
             temp.save()
-            send_vote_to_firebase(candidate_name=temp2.name, position_name=obj.title,noofvotes=temp2.total_vote) #Sending the vote to the firebase Realtime database
             return HttpResponseRedirect('/voteresult/')
         else:
             messages.success(request, 'You Have Already Voted for this Title.')
@@ -75,15 +72,6 @@ def PositionPage(request):
 def VoteResultPage(request):
     obj = Candidate.objects.all().order_by('position','-total_vote')
     return render(request, "voteresult.html", {'obj':obj})
-
-def send_vote_to_firebase(candidate_name, position_name ,noofvotes):
-    ref = db.reference('votes')  # Created a reference to the 'votes' node
-    new_vote_ref = ref.push()  # Generating  a new unique key for the vote by the user
-    new_vote_ref.set({
-        'candidate_name': candidate_name,
-        'position_name': position_name,
-        'Live_Votes':noofvotes,
-    })  # Setting the value of the new vote node to the data we want to store
 
 def LogoutPage(request):
     logout(request)
