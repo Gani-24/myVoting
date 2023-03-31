@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Voting Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #bce7f1;
+    }
+    .jumbotron {
+      background-color: #93dcf3;
+    }
+    h1 {
+      color: #343a40;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0062cc;
+      border-color: #005cbf;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Voting Website</a>
+    <a class="navbar-brand" href="{% url 'login' %}">Logout</a>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="jumbotron">
+      <h1 class="display-4">Anime Voting Website</h1>
+      <p class="lead">Know more about our candidates and Cast your Vote Now!!</p>
+      <hr class="my-4">
+      <p>To get started, simply click the button below to cast your vote.</p>
+      <div class="text-center">
+        <a href="{% url 'position' %}" class="btn btn-primary btn-lg">Vote Now</a>
+      </div>
+    </div>
+  </div>
+  <h4>About the Candidates</h>
+  <div class="row">
+    <div class="card text-white bg-success mb-3" style="width: 20rem;">
+    <img class="card-img-top" src="https://images5.alphacoders.com/121/1217703.png" alt="Eren">
+    <div class="card-body">
+      <h5 class="card-title">Eren Yeager</h5>
+      <p class="card-text">The Main Protagonist of Attack on Titan is running for the position <mark>"Best MC"</mark>.</p>
+    </div>
+  </div>
+  <div class="card text-white bg-success mb-3" style="width: 20rem;">
+    <img class="card-img-top" src="https://wallpapers.com/images/featured/ji4hn7ht2fcfvvxk.jpg" alt="Eren">
+    <div class="card-body">
+      <h5 class="card-title">Naruto Uzumaki</h5>
+      <p class="card-text">Everyone have heard of Naruto the Main Protagonist of Naruto. He is running for the position <mark>"Best MC"</mark></p>
+    </div>
+  </div>
+  <div class="card text-white bg-danger mb-3" style="width: 20rem;">
+    <img class="card-img-top" src="https://i.pinimg.com/originals/00/d5/58/00d558350bf3de56d42581f6623a22c6.jpg" alt="Eren">
+    <div class="card-body">
+      <h5 class="card-title">Sosuke Aizen</h5>
+      <p class="card-text"> The Main Antagonist of the first half of the Famous Series "Bleach". He is running for the position <mark>"Best Villian"</mark></p>
+    </div>
+  </div>
+  <div class="card text-white bg-danger mb-3" style="width: 20rem;">
+    <img class="card-img-top" src="https://wallpaperaccess.com/full/1892973.jpg" alt="Eren">
+    <div class="card-body">
+      <h5 class="card-title">Meruem</h5>
+      <p class="card-text"> Meruem is the main antagonist of the Chimera Ant arc in the anime/manga series Hunter × Hunter. He is running for the position <mark>"Best Villian"</mark></p>
+    </div>
+  </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

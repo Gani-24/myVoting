@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Voting Website First Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      body {
+      background-color: #bce7f1;
+         }
+    .jumbotron {
+      background-color: #93dcf3;
+    }
+    h1 {
+      color: #343a40;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0062cc;
+      border-color: #005cbf;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Welcome to The Voting Website</h1>
+        <p class="lead">Cast your vote</p>
+        <hr class="my-4">
+        <p>Get started with Registering yourself or Log in to Vote</p>
+        <div class="text-center">
+          <a href="{% url 'signup' %}" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5sm
