@@ -16,7 +16,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate('/Users/gani/Voting-APP/voting/serviceAccountkey.json')
+cred = credentials.Certificate('/Users/gani/new/voting/serviceAccountkey.json')
 firebase_admin.initialize_app(cred,{
     'databaseURL': 'https://gani-voting-app-default-rtdb.firebaseio.com'
 })
