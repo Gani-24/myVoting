@@ -24,12 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u8ft-+-8gp#_%7p@a+es(p=vn=eg6y498guq6ovabe$b!@!4#v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+CSRF_TRUSTED_ORIGINS =['myvoting-production.up.railway.app']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -50,7 +51,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CSRF_TRUSTED_ORIGINS =['myvoting-production.up.railway.app']
 
 ROOT_URLCONF = 'voting.urls'
 
@@ -71,6 +71,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'voting.wsgi.application'
+
 
 
 # Database
